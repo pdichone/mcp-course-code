@@ -1,10 +1,12 @@
 from typing import Any, Dict, List, Optional
 from mcp.server.fastmcp import FastMCP
+import os
 import sqlite3
 
 mcp = FastMCP("SQLite Server")
 
-DB_PATH = "/Users/pdichone/Code/vincibits/sandbox/mcp-course/db/"  # Change this to your actual database path
+# The db/ folder that ships next to this file (works on any machine)
+DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "db", "")
 
 
 def dict_from_row(row):
